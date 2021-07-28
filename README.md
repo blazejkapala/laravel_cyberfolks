@@ -72,3 +72,13 @@ php74 artisan migrate
 
 ## Sprawdzenie
 Jeżeli wykonaliśmy wszystko poprawnie to po wprowadzeniu adresu naszej domeny w przeglądarce powinna się nam wyświetlić nasza stona/aplikacja oparta o Laravel'a
+
+## Wykonanie symlinka do storage
+Nie wiem czemu nie zadziałało. Tzn zadziałoało jakoś dziwnie - skopiowało pliki, a nie utworzyło linka.
+```
+php74 artisan storage:link
+```
+utworzyłem simulinka ręcznie będąc w katoalogou root'a Laravela
+```
+ln -s ../storage/app/public storage
+```
