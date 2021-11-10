@@ -1,4 +1,5 @@
 # Hosting cyberfolks.pl (dawniej linuxpl.com) jako hosting dla Laravel
+Instrukcja uaktualniona dla wersji php 8.0
 
 ## Wgranie plików na hasting do katalogu ./nazawa.domeny/public_html
 Kopiujemy katalog root'a Laravela tak aby katlog public znajdował się w public_html
@@ -50,24 +51,25 @@ DB_PASSWORD=skomplikowanehaslo
 ```
 
 ## Instalacja Composer'a
-### Instrukcja jest poprawna dla PHP w wersji 7.4
+### Instrukcja jest poprawna dla PHP w wersji 8.0
 
 Lokalna instalacja Composer'a na koncie (źródło: https://cyberfolks.pl/pomoc/instalacja-composera/): 
 ```
-curl -sS https://getcomposer.org/installer | php74
+curl -sS https://getcomposer.org/installer | php80
 ```
 następnie wywołujemy polecenie
 ```
-php74 composer.phar install --optimize-autoloader --no-dev
+php80 composer.phar install --optimize-autoloader --no-dev
 ```
+
 ## "Uruchomienie" Laravela
 ### Należy wygenerować nowy klucz aplikacji
 ```
-php74 artisan key:generate
+php80 artisan key:generate
 ```
 ### Wykonać migrację
 ```
-php74 artisan migrate
+php80 artisan migrate
 ```
 
 ## Sprawdzenie
@@ -76,7 +78,7 @@ Jeżeli wykonaliśmy wszystko poprawnie to po wprowadzeniu adresu naszej domeny 
 ## Wykonanie symlinka do storage
 Nie wiem czemu nie zadziałało. Tzn zadziałoało jakoś dziwnie - skopiowało pliki, a nie utworzyło linka.
 ```
-php74 artisan storage:link
+php80 artisan storage:link
 ```
 utworzyłem simulinka ręcznie będąc w katoalogou root'a Laravela
 ```
